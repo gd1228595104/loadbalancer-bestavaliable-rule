@@ -21,8 +21,10 @@ public class LoadbalancerAutoConfig {
         return new LoadbalancerStatLifecycle();
     }
 
+
     @Bean
-    public InitServiceLoadbalancer initServiceLoadbalancer(LoadbalancerProperties loadbalancerProperties, LoadBalancerClientFactory loadBalancerClientFactory) {
+    public InitServiceLoadbalancer initServiceLoadbalancer(LoadbalancerProperties loadbalancerProperties,
+                                                           LoadBalancerClientFactory loadBalancerClientFactory) {
         return new InitServiceLoadbalancer(loadbalancerProperties, loadBalancerClientFactory);
     }
 }
